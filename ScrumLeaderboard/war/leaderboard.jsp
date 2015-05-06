@@ -32,6 +32,8 @@
       <td style="border: 1px solid #e3e3e3; background-color: #fff; min-width: 60px;">1</td>
     </tr>
   </table>
+  
 </div>
+<p><a href="/addScoreForm.jsp">Add a new score</a>
 </body>
 </html>
