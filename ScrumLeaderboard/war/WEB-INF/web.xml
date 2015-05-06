@@ -4,15 +4,9 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-	<servlet>
-		<servlet-name>ScrumLeaderboard</servlet-name>
-		<servlet-class>com.google.scrum.ScrumLeaderboardServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ScrumLeaderboard</servlet-name>
-		<url-pattern>/scrumleaderboard</url-pattern>
-	</servlet-mapping>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+
+    <welcome-file-list>
+        <welcome-file>helloworld.jsp</welcome-file>
+    </welcome-file-list>
+
 </web-app>
