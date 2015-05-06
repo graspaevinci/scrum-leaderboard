@@ -18,9 +18,9 @@ public class Score {
 	private String user;
 	
 	@Persistent
-	private int score;
+	private long score;
 	
-	public Score(String user, int score) {
+	public Score(String user, long score) {
 		this.user = user;
 		this.score = score;
 	}
@@ -37,11 +37,11 @@ public class Score {
 		return user;
 	}
 	
-	public void setScore(int score) {
+	public void setScore(long score) {
 		this.score = score;
 	}
 	
-	public int getScore() {
+	public long getScore() {
 		return score;
 	}
 }
