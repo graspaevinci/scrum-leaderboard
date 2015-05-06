@@ -1,3 +1,12 @@
+<%@ page import="com.google.scrum.AddScoreResponse" %>
+<%@ page import="com.google.scrum.AddScoreHandler" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%@ page import="java.util.List" %>
+
+
 <html lang="en">
   <head>
     <title>Hello Leaderboard</title>

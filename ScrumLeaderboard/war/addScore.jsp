@@ -16,6 +16,7 @@
 <%
   AddScoreResponse responseModel = new AddScoreHandler().handle(request);
 %>
-Success!
+
+Successfully added score: <%= responseModel.getScore() %>
 </body>
 </html>
