@@ -1,4 +1,5 @@
-<%@page import="com.google.scrum.Handler"%>
+<%@ page import="com.google.scrum.AddScoreResponse" %>
+<%@ page import="com.google.scrum.AddScoreHandler" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.google.appengine.api.users.User" %>
 <%@ page import="com.google.appengine.api.users.UserService" %>
@@ -13,10 +14,8 @@
 <body>
 
 <%
-  Object responseModel = new Handler().handle(request);
+  AddScoreResponse responseModel = new AddScoreHandler().handle(request);
 %>
-
-<%= responseModel.toString() %>
-
+Success!
 </body>
 </html>
