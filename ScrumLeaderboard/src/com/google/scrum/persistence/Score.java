@@ -18,7 +18,7 @@ public class Score {
 	private String user;
 	
 	@Persistent
-	private Long score;
+	private long score;
 	
 	public Score(String user, long score) {
 		this.user = user;
