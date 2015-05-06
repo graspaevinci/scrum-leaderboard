@@ -1,0 +1,51 @@
+<%@ page import="com.google.scrum.AddScoreResponse" %>
+<%@ page import="com.google.scrum.AddScoreHandler" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%@ page import="java.util.List" %>
+
+<html lang="en">
+  <head>
+    <title>Hello Leaderboard</title>
+  </head>
+  <style>
+    h1 {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 15px;
+      text-align: center;
+      width:100%;
+    }
+    .field {
+      margin: 5px;
+      padding: 5px; 
+    }
+    label {
+      display: inline-block;
+      width: 60px;
+    }
+  </style>
+  <body style="margin: 0">
+  <h1>Leaderboard!</h1>
+  <div style="background-color: #fafafa; border-top: 1px solid #e3e3e3; border-left: 1px solid #e3e3e3; border-right: 2px solid #e3e3e3; border-bottom: 2px solid #e3e3e3; margin: 80px auto 0 auto; width:75%;">
+  <div style="background-color: #00B800; color: #fff; padding: 5px; border-top: 2px solid #339933; font-size: 1.3em; margin: 0 -2px 10px -1px">Upload a score</div>
+  <form action="/addScore.jsp" method="post">
+    <div class="field">
+      <label>Game</label> <input type="text" name="game" autofocus required>
+    </div>
+    <div class="field">
+      <label>Name</label> <input type="text" name="name" required>
+    </div>
+    <div class="field">
+      <label>Score</label> <input type="number" name="score" pattern="^[0-9]+$" required>
+    </div>
+    <div class="field">
+      <input type="submit" value="Submit score">
+    </div>
+  </form>
+</div>
+</body>
+</html>
