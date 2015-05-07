@@ -9,6 +9,7 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
+    <meta http-equiv="refresh" content="3;URL=./leaderboard.jsp">
 </head>
 
 <body>
@@ -17,6 +18,8 @@
   AddScoreResponse responseModel = new AddScoreHandler().handle(request);
 %>
 
-Successfully added score: <%= responseModel.getScore() %>
+<p>Successfully added score: <%= responseModel.getScore() %>
+
+<p>Redirecting to the leaderboard in 3 seconds. <a href="./leaderboard.jsp">Click here</a> if you are not redirected.
 </body>
 </html>
