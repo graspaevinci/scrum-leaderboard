@@ -1,3 +1,6 @@
+<%@page import="com.google.scrum.persistence.Score"%>
+<%@page import="com.google.scrum.ShowScoresHandler"%>
+<%@page import="com.google.scrum.ShowScoresResponse"%>
 <%@ page import="com.google.scrum.AddScoreResponse" %>
 <%@ page import="com.google.scrum.AddScoreHandler" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -5,6 +8,10 @@
 <%@ page import="com.google.appengine.api.users.UserService" %>
 <%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
 <%@ page import="java.util.List" %>
+
+<%
+  ShowScoresResponse responseModel = new ShowScoresHandler().handle(request);
+%>
 
 
 <html lang="en">
@@ -26,6 +33,10 @@
         border-right: 2px solid #e3e3e3;
         border-bottom: 2px solid #e3e3e3;
         margin: 80px auto 0 auto;
+        width:75%;
+      }
+      .actions {
+        margin: 40px auto 0 auto;
         width:75%;
       }
       #header {
@@ -76,21 +87,27 @@
       <td class="cell_header">User</td>
       <td class="cell_header">Score</td>
     </tr>
-    <tr>
-      <td class="cell">Any Game</td>
-      <td class="cell">Martyn</td>
-      <td class="cell">100000</td>
-    </tr>
-    <tr>
-      <td class="cell">Any Game</td>
-      <td class="cell">Luca</td>
-      <td class="cell">1</td>
-    </tr>
+    <% for (Score score : responseModel.getScores()) { %>
+	    <tr>
+	      <td class="cell"><%= score.getGame() %></td>
+	      <td class="cell"><%= score.getUser() %></td>
+	      <td class="cell"><%= score.getScore() %></td>
+	    </tr>
+    <% } %>
   </table>
   
 </div>
-<div id="new_score">
-   <a href="/addScoreForm.jsp">Add a new score</a>
- </div>
+<div class="actions">
+  <form action="/leaderboard.jsp">
+    <label for="name">Filter by game </label><input type="text" name="game">
+    <input type="submit" value="Go">
+  </form>
+  <form action="/leaderboard.jsp">
+    <label for="name">Filter by region </label><input type="text" name="region">
+    <input type="submit" value="Go">
+  </form>
+  <div id="new_score"><a href="/addScoreForm.jsp">Add a new score</a></div>
+</div>
+   
 </body>
 </html>

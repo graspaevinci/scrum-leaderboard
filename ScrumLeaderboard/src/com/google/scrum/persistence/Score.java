@@ -25,6 +25,7 @@ public class Score {
 	
 	public Score(String user, String game, long score) {
 		this.user = user;
+		this.game = game;
 		this.score = score;
 	}
 	
