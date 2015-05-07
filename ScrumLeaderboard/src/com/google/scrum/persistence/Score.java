@@ -18,23 +18,34 @@ public class Score {
 	private String user;
 	
 	@Persistent
+	private String game;
+	
+	@Persistent
 	private Long score;
 	
-	public Score(String user, long score) {
+	public Score(String user, String game, long score) {
 		this.user = user;
 		this.score = score;
 	}
 	
 	public Score() {
-		this(null, -1);
+		this(null, null, -1);
 	}
-	
+
 	public void setUser(String user) {
 		this.user = user;
 	}
 	
 	public String getUser() {
 		return user;
+	}
+	
+	public String getGame() {
+		return game;
+	}
+
+	public void setGame(String game) {
+		this.game = game;
 	}
 	
 	public void setScore(long score) {
