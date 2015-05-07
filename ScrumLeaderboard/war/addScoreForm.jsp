@@ -34,6 +34,9 @@
   <div style="background-color: #00B800; color: #fff; padding: 5px; border-top: 2px solid #339933; font-size: 1.3em; margin: 0 -2px 10px -1px">Upload a score</div>
   <form action="/addScore.jsp" method="post">
     <div class="field">
+      <label>Region</label> <input type="text" name="region" autofocus required>
+    </div>
+    <div class="field">
       <label>Game</label> <input type="text" name="game" autofocus required>
     </div>
     <div class="field">
