@@ -12,7 +12,7 @@
   </head>
   <style>
     h1 {
-      background-color: #000;
+      background-color:#060;
       color: #fff;
       margin: 0;
       padding: 15px;
