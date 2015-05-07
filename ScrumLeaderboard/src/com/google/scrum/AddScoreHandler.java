@@ -11,7 +11,8 @@ public class AddScoreHandler {
 		String scoreString = request.getParameter("score");
 		long score = Long.parseLong(scoreString);
 		String name = request.getParameter("name");
-		Score scoreObj = new Score(name, score);
+		String game = request.getParameter("game");
+		Score scoreObj = new Score(name, game, score);
 		ScorePersistenceManager manager = new ScorePersistenceManager();
 		manager.saveScore(scoreObj);
 		
