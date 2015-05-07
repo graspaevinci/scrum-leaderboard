@@ -12,7 +12,7 @@
   </head>
   <style>
     h1 {
-      background-color: #000;
+      background-color:#060;
       color: #fff;
       margin: 0;
       padding: 15px;
@@ -33,6 +33,9 @@
   <div style="background-color: #fafafa; border-top: 1px solid #e3e3e3; border-left: 1px solid #e3e3e3; border-right: 2px solid #e3e3e3; border-bottom: 2px solid #e3e3e3; margin: 80px auto 0 auto; width:75%;">
   <div style="background-color: #00B800; color: #fff; padding: 5px; border-top: 2px solid #339933; font-size: 1.3em; margin: 0 -2px 10px -1px">Upload a score</div>
   <form action="/addScore.jsp" method="post">
+    <div class="field">
+      <label>Region</label> <input type="text" name="region" autofocus required>
+    </div>
     <div class="field">
       <label>Game</label> <input type="text" name="game" autofocus required>
     </div>
