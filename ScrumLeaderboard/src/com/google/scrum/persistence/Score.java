@@ -26,8 +26,10 @@ public class Score {
 	@Persistent
 	private Long score;
 	
-	public Score(String region, String user, String game, long score) {
+	public Score(String user, String game, String region, long score) {
 		this.user = user;
+		this.game = game;
+		this.region = region;
 		this.score = score;
 	}
 	
@@ -42,14 +44,6 @@ public class Score {
 	public String getUser() {
 		return user;
 	}
-
-	public void setRegion(String region) {
-		this.region = region;
-	}
-	
-	public String getRegion() {
-		return region;
-	}
 	
 	public String getGame() {
 		return game;
@@ -57,6 +51,14 @@ public class Score {
 
 	public void setGame(String game) {
 		this.game = game;
+	}
+	
+	public String getRegion() {
+		return region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
 	}
 	
 	public void setScore(long score) {
